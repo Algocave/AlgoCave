@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlgoCave - IT Services Solutions</title>
+  <meta name="description" content="AlgoCave delivers top-notch Web Development, SEO Management, Marketing, Custom Application Development, and more to help your business grow.">
+  <meta name="keywords" content="AlgoCave, IT Services, Web Development, SEO, Marketing, Custom Applications">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="AlgoCave - IT Services Solutions">
+  <meta property="og:description" content="Professional IT services: Web Dev, SEO, Marketing & Custom Apps.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.algocave.com/">
+  <meta property="og:image" content="https://www.algocave.com/assets/og-image.jpg">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AlgoCave - IT Services Solutions">
+  <meta name="twitter:description" content="Professional IT services: Web Dev, SEO, Marketing & Custom Apps.">
+  <meta name="twitter:image" content="https://www.algocave.com/assets/og-image.jpg">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AlgoCave",
+    "url": "https://www.algocave.com",
+    "logo": "https://www.algocave.com/assets/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/algocave",
+      "https://www.twitter.com/algocave",
+      "https://www.linkedin.com/company/algocave"
+    ],
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+1-800-ALGOCAVE",
+      "contactType": "Customer Service",
+      "areaServed": "US"
+    }]
+  }
+  </script>
+
+  <style>
+    :root { --primary: #27596b; --accent: #ffffff; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: var(--primary); color: var(--accent); line-height: 1.6; }
+    header { background: rgba(0,0,0,0.2); position: fixed; width: 100%; top: 0; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    header a.logo { font-size: 1.5rem; font-weight: bold; color: var(--accent); text-decoration: none; }
+    nav ul { list-style: none; display: flex; gap: 1rem; }
+    nav a { color: var(--accent); text-decoration: none; font-weight: 500; }
+    section { padding: 6rem 2rem 2rem; }
+    #hero { background: url('assets/hero-bg.jpg') no-repeat center/cover; height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+    #hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+    #hero p { font-size: 1.2rem; max-width: 600px; }
+    .btn { display: inline-block; margin-top: 1rem; padding: 0.8rem 1.5rem; background: var(--accent); color: var(--primary); border: none; cursor: pointer; text-decoration: none; font-weight: bold; border-radius: 0.3rem; }
+    .grid { display: grid; gap: 2rem; }
+    #services .grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+    .card { background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 0.5rem; }
+    #projects .grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    footer { background: rgba(0,0,0,0.3); text-align: center; padding: 2rem; margin-top: 2rem; }
+    form input, form textarea { width: 100%; padding: 0.8rem; margin-bottom: 1rem; border: none; border-radius: 0.3rem; }
+    form button { width: 100%; padding: 0.8rem; background: var(--accent); color: var(--primary); border: none; border-radius: 0.3rem; font-size: 1rem; font-weight: bold; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">AlgoCave</a>
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <h1>Empowering Your Digital Growth</h1>
+    <p>At AlgoCave, we specialize in delivering robust IT solutions, from Web Development to SEO, Marketing, and Custom Applications.</p>
+    <a href="#services" class="btn">Explore Our Services</a>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>Building responsive, SEO-friendly websites tailored to your business needs.</p>
+      </div>
+      <div class="card">
+        <h3>SEO Management</h3>
+        <p>Optimizing your online presence to rank higher and attract more customers.</p>
+      </div>
+      <div class="card">
+        <h3>Marketing</h3>
+        <p>Crafting data-driven marketing strategies that deliver results.</p>
+      </div>
+      <div class="card">
+        <h3>Custom Applications</h3>
+        <p>Developing bespoke applications to automate and streamline your workflows.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Recent Projects</h2>
+    <div class="grid" id="project-list">
+      <!-- Dynamically loaded projects -->
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2>Client Testimonials</h2>
+    <div class="grid" id="testimonial-list">
+      <!-- Dynamically loaded testimonials -->
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form action="/api/contact" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 AlgoCave. All rights reserved.</p>
+    <p><a href="https://www.linkedin.com/company/algocave" target="_blank" rel="noopener">LinkedIn</a> | <a href="https://twitter.com/algocave" target="_blank" rel="noopener">Twitter</a></p>
+  </footer>
+
+  <script>
+    // Example dynamic loading (replace URLs with your API endpoints)
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/api/projects')
+        .then(res => res.json())
+        .then(data => {
+          const container = document.getElementById('project-list');
+          data.forEach(proj => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `<h3>${proj.title}</h3><p>${proj.description}</p>`;
+            container.appendChild(card);
+          });
+        });
+
+      fetch('/api/testimonials')
+        .then(res => res.json())
+        .then(data => {
+          const container = document.getElementById('testimonial-list');
+          data.forEach(test => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `<p>"${test.feedback}"</p><h4>- ${test.client}</h4>`;
+            container.appendChild(card);
+          });
+        });
+    });
+  </script>
+</body>
+</html>
